@@ -10,6 +10,7 @@
  *  - 18 Mar 2015 : 1st version.
  *  - 23 Mar 2015 : Trying to improve rand().
  *  - 15 Aug 2016 : Documented. GPL v3.
+ *  - 13 Sep 2026 : Allow negative numbers - MT
  *
  * Defined macros:
  *  - RAND_MAX
@@ -21,10 +22,10 @@
  * http://www.floppysoftware.es
  * floppysoftware@gmail.com
  */
+ 
 #ifndef RAND_H
 
 #define RAND_H
-
 #define RAND_MAX 32767
 
 int xs_seed = 1; // Initial value for seed
@@ -38,7 +39,7 @@ rand()
 {
 	// return (xs_seed = ((xs_seed * 3) + 1) & 0x7FFF);
 
-	return (xs_seed = (((xs_seed << 1) + xs_seed) + 1) & 0x7FFF);
+        return (xs_seed = (((xs_seed << 1) + xs_seed) + 1));
 }
 
 /**
@@ -54,4 +55,3 @@ unsigned int seed;
 
 #endif
 
-
