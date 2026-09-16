@@ -1,13 +1,9 @@
 /*
- * sdc-calendar.c - Example program for SDCC.
+ * calendar.c - Example program for MESCC.
  *
  * Copyright(C) 2023   MT
  *
- * Displays the calendar for a month.
- * 
- *    sdcc -mz80 --no-std-crt0 --data-loc 0 sdc-crt0-args.rel sdc-cpm.rel sdc-calendar.c 
- * 
- *    sdobjcopy -Iihex -Obinary --gap-fill 0 sdc-calendar.ihx sdc-calendar.com
+ * Displays the calendar for a single month or whole year.
  * 
  * This  program is free software: you can redistribute it and/or modify it
  * under  the terms of the GNU General Public License as published  by the
@@ -23,16 +19,18 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * 03 Sep 23   0.1   - Initial version - MT
- * 08 Sep 23   0.2   - Get month/year from clock or command line - MT
- * 16 Sep 26   0.3   - Prints multiple months on week at a time - MT
+ * 08 Sep 23   0.2   - Get month/year from command line - MT
+ * 16 Sep 26   0.3   - Prints multiple months one week at a time - MT
+ *             0.4   - Do all the hard work in print_months() - MT
+ *             0.5   - Modified to compile on CP/M using MESCC - MT
  * 
  * ToDo              -
  *
  */
 
-#define  NAME        "sdc-hello"
-#define  VERSION     "0.3"
-#define  BUILD       "0003"
+#define  NAME        "calendar"
+#define  VERSION     "0.5"
+#define  BUILD       "0005"
 #define  AUTHOR      "MT"
 #define  COPYRIGHT   (__DATE__ + 7)  /* Extract copyright year from date */
  
