@@ -1,17 +1,3 @@
-# ------------------
-# INTERMEDIATE FILES
-# ------------------
-*.HEX
-*.ZSM
-*.PRN
-
--------------------------
-# DOCUMENTATION GENERATOR
-# -----------------------
-gdoc.com
-GDOC.COM
-
-# -----------------------
-# PROJECT FILES & FOLDERS
-# -----------------------
-backup/
+*
+!*.c
+!*.h
