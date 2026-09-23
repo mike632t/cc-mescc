@@ -19,6 +19,7 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * 12 Sep 26   0.1   - Initial version - MT
+ * 23 Sep 26         - Random values are unsigned - MT
  *
  */
 
@@ -34,8 +35,9 @@ int main()
    for( i_count=1; i_count<=50000; i_count++)  
    {
       for( i_counter=0; i_counter<10; i_counter++)
-         printf("%6d\t", rand());
+         printf("%6u\t", rand());
       printf("\n");
    }
+   return 0;
 }
 
